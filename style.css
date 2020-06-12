@@ -1,0 +1,27 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  width: 100vw;
+  height: 100vh;
+}
+h1 {
+  font-weight: 400;
+}
+#images {
+  width: 100vw;
+  height: 100vh;
+  /*background-image: url(img/1.jpg);*/
+  background-size: cover;
+}
+
+.main {
+  visibility: hidden;
+  position: absolute;
+  display: flex;
+  top: 10%;
+  left: 50%;
+  transform: translate(-50%, 0%);
+}
