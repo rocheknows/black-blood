@@ -6,22 +6,109 @@
 body {
   width: 100vw;
   height: 100vh;
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  overflow: hidden;
+  box-sizing: border-box;
+  background-color: #f9f9f9;
 }
 h1 {
   font-weight: 400;
 }
+h2 {
+  font-family: serif;
+  font-size: 24px;
+  font-weight: 100;
+  letter-spacing: 0.7rem;
+}
+
+p {
+  font-size: 18px;
+  line-height: 1.5rem;
+}
+a {
+  color: crimson;
+  text-decoration: none;
+}
+a:hover {
+  border-bottom: 2px dashed crimson;
+}
+a:visited {
+  color: crimson;
+}
+.loader {
+  position: absolute;
+  background-color: lightgray;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  z-index: 1;
+}
+.loader h1 {
+  color: gray;
+  letter-spacing: 0.5rem;
+  font-family: serif;
+}
 #images {
   width: 100vw;
   height: 100vh;
-  /*background-image: url(img/1.jpg);*/
-  background-size: cover;
+  cursor: pointer;
+  overflow: hidden;
+  object-fit: cover;
+  object-position: center;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
 }
 
 .main {
-  visibility: hidden;
+  display: none;
+  width: 60vw;
   position: absolute;
-  display: flex;
-  top: 10%;
+  padding: 10px;
+  /*background-color: bisque;*/
+  grid-gap: 30px;
+  justify-content: space-evenly;
+  top: 3%;
   left: 50%;
   transform: translate(-50%, 0%);
+  overflow: hidden;
+  max-height: 100vh;
+}
+.main div {
+  margin: 0px;
+}
+#images img {
+  object-fit: contain;
+}
+
+.mobile {
+  display: none;
+  position: fixed;
+  height: 100vh;
+  width: 100vw;
+  padding: 40px;
+  background-color: gray;
+  color: black;
+  overflow: hidden;
+  grid-template-columns: 1fr;
+  grid-gap: 10px;
+  z-index: 9;
+}
+.mobile a {
+  color: white;
+}
+.mobile h1 {
+  font-size: 40px;
+  line-height: 3rem;
+}
+
+@media only screen and (max-width: 800px) {
+  .mobile {
+    display: grid;
+  }
 }
