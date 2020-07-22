@@ -1,3 +1,15 @@
+@font-face {
+  font-family: "work";
+  src: url("/WorkSans-Regular.ttf") format("truetype");
+}
+@font-face {
+  font-family: "mazzius";
+  src: url("/MAZIUSREVIEW20.09-Regular.otf") format("opentype");
+}
+@font-face {
+  font-family: "book";
+  src: url("/standard-book.otf") format("opentype");
+}
 * {
   margin: 0;
   padding: 0;
@@ -8,24 +20,26 @@ body {
   height: 100vh;
   margin: 0;
   padding: 0;
-  font-family: sans-serif;
+  font-family: "book";
   overflow: hidden;
   box-sizing: border-box;
   background-color: #f9f9f9;
 }
 h1 {
   font-weight: 400;
+  font-family: "book";
 }
 h2 {
-  font-family: serif;
+  font-family: "book";
+  color: white;
   font-size: 24px;
-  font-weight: 100;
-  letter-spacing: 0.7rem;
+  font-weight: 200;
+  letter-spacing: 0.1rem;
 }
 
 p {
-  font-size: 18px;
-  line-height: 1.5rem;
+  font-size: 20px;
+  line-height: 1.7rem;
 }
 a {
   color: crimson;
@@ -39,7 +53,7 @@ a:visited {
 }
 .loader {
   position: absolute;
-  background-color: lightgray;
+  background-color: crimson;
   width: 100vw;
   height: 100vh;
   display: flex;
@@ -64,10 +78,14 @@ a:visited {
   margin: 0;
   padding: 0;
 }
+.title {
+  text-align: center;
+  letter-spacing: 0.3rem;
+}
 
 .main {
   display: none;
-  width: 60vw;
+  width: 50vw;
   position: absolute;
   padding: 10px;
   /*background-color: bisque;*/
@@ -78,6 +96,7 @@ a:visited {
   transform: translate(-50%, 0%);
   overflow: hidden;
   max-height: 100vh;
+  color: black;
 }
 .main div {
   margin: 0px;
